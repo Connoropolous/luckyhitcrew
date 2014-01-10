@@ -1,0 +1,28 @@
+
+<ul class="breadcrumb">
+  <li><%= link_to 'Home', root_path %><span class="divider">/</span></li>
+  <li><%= link_to "Edit #{@manga.name}", edit_manga_path(@manga) %><span class="divider">/</span></li>
+  <li class="active"><%= @chapter.title %></li>
+</ul>
+
+
+
+<div>
+<%= form_for [@manga, @chapter] do |f| %>
+	
+	<%= f.label 'Chapter Title:' %>
+	<%= f.text_field :title %>
+	<%= f.submit 'Update', :class => 'btn' %>
+
+<% end %>
+</div>
+
+<div class='edit-chapter-pages'>
+<%= render 'chapter_pages', :chapter => @chapter %>
+</div>
+
+<div class='chapter_input'>
+	<br />
+	<%= render 'chapters/form', :chapter_id => @chapter.id %>
+</div>
+

@@ -1,14 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Luckyhitcrew</title>
+  <title>Lucky Hit Crew</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+    <div class="wrapper">
+        <header>
+            <div class="banner">
+                <h2></h2>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/mangas" class="mangamenu"></a></li>
+                        <li><a href="/services" class="servicemenu"></a></li>
+                        <li><a href="/media" class="mediamenu"></a></li>
+                        <li><a href="/links" class="linksmenu"></a></li>
+                        <li><a href="/contact" class="contactmenu"></a></li>
+                    </ul>
+                    <div class="clearfloat"></div>
+                </div>
+                <div class="socialmedia">
+                    <ul>
+                        <li class="facebook" title="Facebook"><a href="http://www.facebook.com/luckyhitcrew"></a></li>
+                        <li class="twitter" title="Twitter"><a href=""></a></li>
+                        <li class="youtube" title="Youtube"><a href="http://www.youtube.com/user/NigzBlackman"></a></li>
+                        <li class="deviantart" title="Deviant Art"><a href="http://nigz.deviantart.com/"></a></li>
+                        <li class="gmail" title="Email"><a href="mailto:nigz@luckyhitcrew.com"></a></li>
+                        <li class="rss" title="RSS feed"><a href=""></a></li>
+                    </ul>
+                    <div class="clearfloat"></div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="content">
+            <div class="leftcol">
+                <div class="aboutme">
+                   <a href="/about"><img src="/assets/aboutme.png"></a>
+                </div>
+                
+                <div class="store">
+                   <a href="/store"><img src="/assets/store.png"></a>
+                </div>
+                <div class="blog">
+                   <a href="/blog"><img src="/assets/blog.png"></a>
+                </div>
+               
+                <div class="calendar widget">
+                    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=connorturland%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FToronto" style=" border-width:0 " width="250" height="250" frameborder="0" scrolling="no"></iframe>
+                </div>
+                
+                <div class="twitter widget">
+                    <a class="twitter-timeline" href="https://twitter.com/luckyhitcrew" data-widget-id="420963686757314561">Tweets by @luckyhitcrew</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+        
+            </div>
+            
+            <div class="rightcol">
+                <%= yield %>
+            </div>
+            <div class="clearfloat"></div>
+        </div>
+        
+        <footer>
+            &copy; <%= Time.now.year %> Lucky Hit Crew. Site by <a href="http://zenpr.ca">ZenPR</a>.
+        </footer>
+    </div>
 </body>
 </html>
