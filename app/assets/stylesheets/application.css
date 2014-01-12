@@ -231,7 +231,7 @@ footer {
 }
 
 footer a {
-    color: #FF00FF;
+    color: #FF00FF !important;
 }
 
 /* end footer */
