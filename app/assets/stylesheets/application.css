@@ -36,6 +36,10 @@
 
 }
 
+h1 {
+  font-family: '8bit', helvetica, sans-serif;
+}
+
 h2 {
    color: black;
 }
@@ -173,6 +177,26 @@ header {
 }
 /* end header */
 
+
+/* admin panel */
+
+.adminmenu {
+
+}
+
+.adminmenu {
+  list-style:none;
+  margin:0;
+  padding:5px;
+  background:#00FF00;
+  height:20px;
+}
+
+.adminmenu li {
+  float:left;
+  margin-left:5px;
+}
+
 /* content */
 
 .leftcol, .rightcol {
@@ -187,9 +211,12 @@ header {
 }
 
 .rightcol {
-    width:690px;
-    padding-left:20px;
+    width:650px;
+    margin-left:20px;
+    padding:0 20px;
+    font-family: 'press_start', helvetica, sans-serif;
 }
+
 
 
 /* footer */

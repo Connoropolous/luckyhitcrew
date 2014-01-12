@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  
+  before_filter :authenticate_admin!, only: [:edit, :create, :destroy]
 
   def index
     @pages = Pages.all
@@ -8,7 +10,6 @@ class PagesController < ApplicationController
     @page = Page.create(params[:page])
     render :json => {:success => true, :chapter_pages => render_to_string(:partial => 'chapters/chapter_pages', :locals => {:chapter => @page.chapter}) }  
   end
-
 
   def edit
   end

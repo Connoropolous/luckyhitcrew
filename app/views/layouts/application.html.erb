@@ -23,12 +23,12 @@
                 </div>
                 <div class="socialmedia">
                     <ul>
-                        <li class="facebook" title="Facebook"><a href="http://www.facebook.com/luckyhitcrew"></a></li>
-                        <li class="twitter" title="Twitter"><a href=""></a></li>
-                        <li class="youtube" title="Youtube"><a href="http://www.youtube.com/user/NigzBlackman"></a></li>
-                        <li class="deviantart" title="Deviant Art"><a href="http://nigz.deviantart.com/"></a></li>
-                        <li class="gmail" title="Email"><a href="mailto:nigz@luckyhitcrew.com"></a></li>
-                        <li class="rss" title="RSS feed"><a href=""></a></li>
+                        <li class="facebook" title="Facebook"><a href="http://www.facebook.com/luckyhitcrew" target="_blank"></a></li>
+                        <li class="twitter" title="Twitter"><a href="http://www.twitter.com/luckyhitcrew" target="_blank"></a></li>
+                        <li class="youtube" title="Youtube"><a href="http://www.youtube.com/user/NigzBlackman" target="_blank"></a></li>
+                        <li class="deviantart" title="Deviant Art"><a href="http://nigz.deviantart.com/" target="_blank"></a></li>
+                        <li class="gmail" title="Email"><a href="mailto:nigz@luckyhitcrew.com" target="_blank"></a></li>
+                        <li class="rss" title="RSS feed"><a href="/rss"></a></li>
                     </ul>
                     <div class="clearfloat"></div>
                 </div>
@@ -45,7 +45,7 @@
                    <a href="/store"><img src="/assets/store.png"></a>
                 </div>
                 <div class="blog">
-                   <a href="/blog"><img src="/assets/blog.png"></a>
+                   <a href="/blogs"><img src="/assets/blog.png"></a>
                 </div>
                
                 <div class="calendar widget">
@@ -60,6 +60,14 @@
             </div>
             
             <div class="rightcol">
+                <% if admin_signed_in? %>
+                  <ul class="adminmenu">
+                    <li><%= link_to 'New Blog', new_blog_path %></li>
+                    <li><%= link_to 'New Update', new_update_path %></li>
+                    <li><%= link_to 'New Manga', new_manga_path %></li>
+                  </ul>
+                  <div class="clearfloat"></div>
+                <% end %>
                 <%= yield %>
             </div>
             <div class="clearfloat"></div>

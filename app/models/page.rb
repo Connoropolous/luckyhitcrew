@@ -1,7 +1,7 @@
 class Page < ActiveRecord::Base
   belongs_to :chapter
   attr_accessible :name, :chapter_id, :image
-  mount_uploader :image, ImageUploader
+  #mount_uploader :image, ImageUploader
   before_create :default_name
 
 

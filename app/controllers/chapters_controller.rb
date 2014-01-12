@@ -1,5 +1,7 @@
 class ChaptersController < ApplicationController
 
+  before_filter :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
+
 	def index
 		@chapters = Chapter.all
 	end

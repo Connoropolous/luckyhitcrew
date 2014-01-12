@@ -1,24 +1,40 @@
 class MangasController < ApplicationController
+
+  before_filter :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
   before_filter :get_manga, :only => [:update, :edit, :destroy]
 
   def index
   	@mangas = Manga.all
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @mangas }
+    end
   end
 
   def new
   	@manga = Manga.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @manga }
+    end
   end
 
+  # POST /mangas
+  # POST /mangas.json
   def create
-    if @manga = Manga.create_manga!(:manga_name => params[:manga][:name],
-                  :manga_synopsis => params[:manga][:synopsis])
-      flash[:notice] = "Succesfully added manga."
-      redirect_to mangas_path
-    else
-      flash[:error] = "The manga name or synopsis fields cannot be left blank."
-      render "new"
-    end
+    @manga = Manga.new(params[:manga])
 
+    respond_to do |format|
+      if @manga.save
+        format.html { redirect_to @manga, notice: 'Manga was successfully created.' }
+        format.json { render json: @manga, status: :created, location: @manga }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @manga.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def show

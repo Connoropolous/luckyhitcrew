@@ -13,6 +13,10 @@ Luckyhitcrew::Application.routes.draw do
   match 'contact' => 'sitepages#contact'
   match 'about' => 'sitepages#about'
   
+  resources :blogs
+  resources :updates
+  resources :pages
+  
   get     'mangas/:manga_id/chapters(.:format)'               => 'chapters#index',  :as => :manga_chapters
   post    'mangas/:manga_id/chapters(.:format)'               => 'chapters#create'
   get     'mangas/:manga_id/chapters/new(.:format)'           => 'chapters#new',    :as => :new_manga_chapter   

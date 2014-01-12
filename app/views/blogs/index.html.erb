@@ -1,0 +1,17 @@
+<h1>Blog</h1>
+
+<% @blogs.each do |blog| %>
+  <div class="blogpost">
+    <div class="blogtitle"><%= blog.title %></div>
+    <div class="blogbody"><%= blog.body.truncate(300) %></div>
+    <div class="bloglink">
+      <%= link_to 'View', blog %>
+      <%= link_to 'Edit', edit_blog_path(blog) %>
+      <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+<% end %>
+
+<br />
+
+
