@@ -36524,3 +36524,71 @@ Served asset /yt8bit.png - 304 Not Modified (0ms)
 
 Started GET "/assets/t8bit.png" for 127.0.0.1 at 2014-01-12 00:08:12 -0500
 Served asset /t8bit.png - 304 Not Modified (3ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2014-01-12 00:19:43 -0500
+Processing by LinksController#index as HTML
+  [1m[35mLink Load (1.0ms)[0m  SELECT "links".* FROM "links" 
+  Rendered links/index.html.erb within layouts/application (1.0ms)
+  [1m[36mAdmin Load (1.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."id" = 1066195201 LIMIT 1[0m
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-01-12 00:19:43 -0500
+Served asset /links.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blogs.css?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /blogs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/chapters.css?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /chapters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/updates.css?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /updates.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mangas.css?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /mangas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blogs.js?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /blogs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chapters.js?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /chapters.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/links.js?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /links.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mangas.js?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /mangas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/updates.js?body=1" for 127.0.0.1 at 2014-01-12 00:19:44 -0500
+Served asset /updates.js - 304 Not Modified (0ms)
