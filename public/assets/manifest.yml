@@ -41,10 +41,10 @@ t8bit.png: t8bit-931f09e509c9ba8f4f7248a72ef5161e.png
 t8bit/index.png: t8bit-931f09e509c9ba8f4f7248a72ef5161e.png
 yt8bit.png: yt8bit-bdd4a84c67e3e312a40593032a87e577.png
 yt8bit/index.png: yt8bit-bdd4a84c67e3e312a40593032a87e577.png
-application.js: application-1f7ac8c93a4870ea97585f722cc1e1e1.js
-application/index.js: application-1f7ac8c93a4870ea97585f722cc1e1e1.js
-application.css: application-ea66b4c3bcf99fdaf04e704540fe51e9.css
-application/index.css: application-ea66b4c3bcf99fdaf04e704540fe51e9.css
+application.js: application-992a6f01c2ee4897aed1c283bf901d14.js
+application/index.js: application-992a6f01c2ee4897aed1c283bf901d14.js
+application.css: application-b362b5f7c4b8f3ac9dbfeaf62afa1b79.css
+application/index.css: application-b362b5f7c4b8f3ac9dbfeaf62afa1b79.css
 fonts/8-bit_wonder-webfont.eot: fonts/8-bit_wonder-webfont-ee716c80e476a74af70f228131b01b26.eot
 fonts/8-bit_wonder-webfont/index.eot: fonts/8-bit_wonder-webfont-ee716c80e476a74af70f228131b01b26.eot
 fonts/8-bit_wonder-webfont.svg: fonts/8-bit_wonder-webfont-e208f69443ec813b653d81682a6b39ff.svg

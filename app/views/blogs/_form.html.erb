@@ -19,6 +19,14 @@
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </div>
+  <div class="field">
+    <%= f.label :mediatype, "Select Media Type Of The Url You Add" %><br />
+    <%= f.select :mediatype, [ 'None', 'Image', 'Youtube Video' ] %>
+  </div>
+  <div class="field">
+    <%= f.label :mediaurl, "(optional) Add The Url Of An Image Or Youtube Video (formatting: http://www.youtube.com/embed/gJsD76zir_c)" %><br />
+    <%= f.text_field :mediaurl %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

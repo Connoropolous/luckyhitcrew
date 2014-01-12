@@ -2,13 +2,23 @@
 
 <% @blogs.each do |blog| %>
   <div class="blogpost">
-    <div class="blogtitle"><%= blog.title %></div>
-    <div class="blogbody"><%= blog.body.truncate(300) %></div>
+    <div class="blogtitle"><%= link_to blog.title, blog %></div>
+    <div class="blogdate"><%= blog.created_at.strftime("%b %d, %Y")  %></div>
+    <div class="blogbody">
+      <% if blog.mediatype == "Image" %>
+        <img class="blogimage" src="<%= blog.mediaurl %>">
+      <% elsif blog.mediatype == "Youtube Video" %>
+        <iframe class="blogvideo" width="300" height="169" src="<%= blog.mediaurl %>" frameborder="0" allowfullscreen></iframe>
+      <% end %>
+      <%= blog.body.truncate(300) %><%= link_to 'keep reading', blog %>
+    <div class="clearfloat"></div>
+    </div>
+    <% if admin_signed_in? %>
     <div class="bloglink">
-      <%= link_to 'View', blog %>
       <%= link_to 'Edit', edit_blog_path(blog) %>
       <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
+    <% end %>
   </div>
 <% end %>
 

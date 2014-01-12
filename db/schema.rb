@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140112042124) do
+ActiveRecord::Schema.define(:version => 20140112061515) do
 
   create_table "admins", :force => true do |t|
     t.string   "name",                   :default => "", :null => false
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(:version => 20140112042124) do
     t.text     "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "mediatype"
+    t.string   "mediaurl"
   end
 
   create_table "chapters", :force => true do |t|

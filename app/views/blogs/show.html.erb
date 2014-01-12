@@ -2,6 +2,18 @@
 
 <h1><%= @blog.title %></h1>
 
+<p><%= @blog.created_at.strftime("%b %d, %Y") %></p>
+
+<% if @blog.mediatype == "Image" %>
+<p>
+  <img src="<%= @blog.mediaurl %>">
+</p>
+<% elsif @blog.mediatype == "Youtube Video" %>
+<p>
+  <iframe width="650" height="366" src="<%= @blog.mediaurl %>" frameborder="0" allowfullscreen></iframe>
+</p>
+<% end %>
+
 <p>
   <%= @blog.body %>
 </p>

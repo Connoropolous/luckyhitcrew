@@ -1,7 +1,7 @@
 class Manga < ActiveRecord::Base
   before_create :create_slug
   has_many :chapters
-  attr_accessible :name, :synopsis
+  attr_accessible :name, :synopsis, :imageurl
   attr_protected :slug
 
   validates_presence_of :name, :synopsis 

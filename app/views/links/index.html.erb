@@ -3,8 +3,12 @@
 <p>"Link"ing you up with the coolest people and sites on the web.</p>
 
 <% @links.each do |link| %>
+  <div class="link">
   <p><%= link_to link.url, link.url %></p>
   <p><%= link.description %></p>
-  <p><%= link_to 'Edit', edit_link_path(link) %><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% if admin_signed_in? %>
+  <p><%= link_to 'Edit', edit_link_path(link) %>&nbsp;<%= link_to 'Delete', link, method: :delete, data: { confirm: 'Are you sure?' } %>
   </p>
+  <% end %>
+  </div>
 <% end %>
