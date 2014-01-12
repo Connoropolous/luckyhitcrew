@@ -9,10 +9,10 @@ Luckyhitcrew::Application.routes.draw do
   match 'services' => 'sitepages#services'
   match 'store' => 'sitepages#store'
   match 'media' => 'sitepages#media'
-  match 'links' => 'sitepages#links'
   match 'contact' => 'sitepages#contact'
   match 'about' => 'sitepages#about'
   
+  resources :links, except: :show
   resources :blogs
   resources :updates
   resources :pages

@@ -28,7 +28,6 @@
                         <li class="youtube" title="Youtube"><a href="http://www.youtube.com/user/NigzBlackman" target="_blank"></a></li>
                         <li class="deviantart" title="Deviant Art"><a href="http://nigz.deviantart.com/" target="_blank"></a></li>
                         <li class="gmail" title="Email"><a href="mailto:nigz@luckyhitcrew.com" target="_blank"></a></li>
-                        <li class="rss" title="RSS feed"><a href="/rss"></a></li>
                     </ul>
                     <div class="clearfloat"></div>
                 </div>
@@ -47,10 +46,6 @@
                 <div class="blog">
                    <a href="/blogs"><img src="/assets/blog.png"></a>
                 </div>
-               
-                <div class="calendar widget">
-                    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=connorturland%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FToronto" style=" border-width:0 " width="250" height="250" frameborder="0" scrolling="no"></iframe>
-                </div>
                 
                 <div class="twitter widget">
                     <a class="twitter-timeline" href="https://twitter.com/luckyhitcrew" data-widget-id="420963686757314561">Tweets by @luckyhitcrew</a>
@@ -65,6 +60,8 @@
                     <li><%= link_to 'New Blog', new_blog_path %></li>
                     <li><%= link_to 'New Update', new_update_path %></li>
                     <li><%= link_to 'New Manga', new_manga_path %></li>
+                    <li><%= link_to 'New Link', new_link_path %></li>
+                    <li><%= link_to('Logout', destroy_admin_session_path, :method => :delete) %></li>
                   </ul>
                   <div class="clearfloat"></div>
                 <% end %>
