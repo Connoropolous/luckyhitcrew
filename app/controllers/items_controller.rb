@@ -1,15 +1,4 @@
 class ItemsController < ApplicationController
-  # GET /items
-  # GET /items.json
-  def index
-    @commissions = Item.find_all_by_category("Commission")
-    @mangas = Item.find_all_by_category("Manga")
-    @artworks = Item.find_all_by_category("Artwork")
-
-    respond_to do |format|
-      format.html # index.html.erb
-    end
-  end
   
   # GET /items/1
   # GET /items/1.json
@@ -77,7 +66,7 @@ class ItemsController < ApplicationController
     @item.destroy
 
     respond_to do |format|
-      format.html { redirect_to items_url }
+      format.html { redirect_to store_url }
       format.json { head :no_content }
     end
   end

@@ -74,17 +74,10 @@ header {
  color:#FFF;
 }
 
-.banner h2 {
- font-size:70px;
- text-align:left;
- margin:0;
- padding:0;
- position: absolute;
- transform: rotate(7deg);
- -ms-transform: rotate(7deg);
- -webkit-transform: rotate(-7deg);
- top: 147px;
- left: 15px;
+a.home {
+display: block;
+height: 300px;
+width: 291px;
 }
 
 .menu {
@@ -251,6 +244,7 @@ header {
 /* footer */
 
 footer {
+    margin-top:10px;
     width:940px;
     padding:10px;
     text-align:center;

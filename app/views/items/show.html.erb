@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Back to Store', items_path %>
+<%= link_to 'Back to Store', store_path %>
 
     <h1><%= @item.title %></h1>
     $<%= @item.price %>
@@ -8,5 +8,5 @@
     <img class="storeshowimage" src="<%= @item.imageurl %>">
     <% if admin_signed_in? %>
       <%= link_to 'Edit', edit_item_path(@item) %>
-      <%= link_to 'Destroy', @item, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Delete', @item, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>

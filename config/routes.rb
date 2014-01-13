@@ -17,7 +17,7 @@ Luckyhitcrew::Application.routes.draw do
   match 'contact' => 'sitepages#contact'
   match 'about' => 'sitepages#about'
   
-  resources :items
+  resources :items, except: :index
   resources :links, except: :show
   resources :blogs
   resources :updates

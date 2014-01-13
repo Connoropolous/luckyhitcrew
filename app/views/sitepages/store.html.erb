@@ -2,21 +2,33 @@
 
 <div class="storecommissions">
 <h2>Commissions</h2>
-<% @commissions.each do |item| %>
+<% @commissions.each_with_index do |item, index| %>
   <%= render item %>
+  <% if (index+1) % 3 == 0 %>
+    <div class="clearfloat"></div>
+  <% end %>
 <% end %>
+<div class="clearfloat"></div>
 </div>
 
 <div class="storemanga">
 <h2>Manga</h2>
-<% @mangas.each do |item| %>
+<% @mangas.each_with_index do |item, index| %>
   <%= render item %>
+  <% if (index+1) % 3 == 0 %>
+    <div class="clearfloat"></div>
+  <% end %>
 <% end %>
+<div class="clearfloat"></div>
 </div>
 
 <div class="storeartwork">
 <h2>Artwork</h2>
-<% @artworks.each do |item| %>
+<% @artworks.each_with_index do |item, index| %>
   <%= render item %>
+  <% if (index+1) % 3 == 0 %>
+    <div class="clearfloat"></div>
+  <% end %>
 <% end %>
+<div class="clearfloat"></div>
 </div>
