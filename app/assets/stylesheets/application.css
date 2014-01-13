@@ -38,6 +38,8 @@
 
 h1 {
   font-family: '8bit', helvetica, sans-serif;
+  line-height: 1.3em;
+  font-size:2em;
 }
 
 h2 {
@@ -209,6 +211,10 @@ width: 291px;
     padding:0 20px;
     font-family: 'press_start', helvetica, sans-serif;
     position:relative;
+}
+
+.rightcol img {
+  max-width:650px;
 }
 
 .rightcol p {

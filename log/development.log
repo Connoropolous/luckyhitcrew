@@ -67737,3 +67737,181 @@ Served asset /mediamenu.png - 304 Not Modified (2ms)
 
 Started GET "/assets/t8bit.png" for 127.0.0.1 at 2014-01-12 22:29:32 -0500
 Served asset /t8bit.png - 304 Not Modified (0ms)
+
+
+Started GET "/store" for 127.0.0.1 at 2014-01-12 22:47:10 -0500
+Processing by SitepagesController#store as HTML
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."category" = 'Commission'
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."category" = 'Manga'[0m
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."category" = 'Artwork'
+  Rendered items/_item.html.erb (3.0ms)
+  Rendered items/_item.html.erb (1.0ms)
+  Rendered items/_item.html.erb (1.0ms)
+  Rendered items/_item.html.erb (1.0ms)
+  Rendered items/_item.html.erb (1.0ms)
+  Rendered sitepages/store.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 262ms (Views: 255.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/blogs.css?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /blogs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/chapters.css?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /chapters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/errors.css?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /errors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /links.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mangas.css?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /mangas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/updates.css?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /updates.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:11 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:12 -0500
+Served asset /jquery-fileupload/basic.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blogs.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:12 -0500
+Served asset /blogs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:12 -0500
+Served asset /jquery-fileupload/jquery.fileupload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:12 -0500
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:12 -0500
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/chapters.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:12 -0500
+Served asset /chapters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/errors.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:12 -0500
+Served asset /errors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:12 -0500
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/links.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:13 -0500
+Served asset /links.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mangas.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:13 -0500
+Served asset /mangas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:13 -0500
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/updates.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:13 -0500
+Served asset /updates.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-12 22:47:13 -0500
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/aboutme.png" for 127.0.0.1 at 2014-01-12 22:47:13 -0500
+Served asset /aboutme.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/store.png" for 127.0.0.1 at 2014-01-12 22:47:13 -0500
+Served asset /store.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog.png" for 127.0.0.1 at 2014-01-12 22:47:13 -0500
+Served asset /blog.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/LHCbg2.png" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /LHCbg2.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servicesmenu.png" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /servicesmenu.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contactmenu.png" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /contactmenu.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linksmenu.png" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /linksmenu.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mangamenu.png" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /mangamenu.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mediamenu.png" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /mediamenu.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fonts/8-bit_wonder-webfont.woff" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /fonts/8-bit_wonder-webfont.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fonts/pressstart2p-webfont.woff" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /fonts/pressstart2p-webfont.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmail8bit.png" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /gmail8bit.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/da8bit.png" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /da8bit.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/t8bit.png" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /t8bit.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/yt8bit.png" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /yt8bit.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fb8bit.png" for 127.0.0.1 at 2014-01-12 22:47:14 -0500
+Served asset /fb8bit.png - 304 Not Modified (0ms)
