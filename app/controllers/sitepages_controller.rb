@@ -12,10 +12,6 @@ class SitepagesController < ApplicationController
         
     end
     
-    def links
-        
-    end
-    
     def manga
         
     end

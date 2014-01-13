@@ -1,15 +1,1 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  title: MyString
-  price: MyString
-  imageurl: MyString
-  category: MyString
-  paypalcode: MyText
-
-two:
-  title: MyString
-  price: MyString
-  imageurl: MyString
-  category: MyString
-  paypalcode: MyText
