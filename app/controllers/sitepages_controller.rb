@@ -1,7 +1,8 @@
 class SitepagesController < ApplicationController
     
     def home
-        
+      @slides = Slide.order("id")
+      @updates = Update.order("created_at DESC").limit(3)
     end
     
     def about
@@ -17,7 +18,7 @@ class SitepagesController < ApplicationController
     end
     
     def media
-        
+      @videos = Video.order("created_at DESC")
     end
     
     def about

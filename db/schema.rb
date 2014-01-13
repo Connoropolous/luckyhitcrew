@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140112231209) do
+ActiveRecord::Schema.define(:version => 20140113175743) do
 
   create_table "admins", :force => true do |t|
     t.string   "name",                   :default => "", :null => false
@@ -86,9 +86,27 @@ ActiveRecord::Schema.define(:version => 20140112231209) do
 
   add_index "pages", ["chapter_id"], :name => "index_pages_on_chapter_id"
 
+  create_table "pagetexts", :force => true do |t|
+    t.text     "text"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "slides", :force => true do |t|
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "updates", :force => true do |t|
     t.string   "title"
     t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "videos", :force => true do |t|
+    t.string   "url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

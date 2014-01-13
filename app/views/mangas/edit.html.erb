@@ -4,14 +4,16 @@
 
 
 <%= form_for @manga do |f| %>
-	<div><%= f.label 'Name:' %> <%= f.text_field :name %></div>
-	<div><%= f.label 'Synopsis:' %> <%= f.text_area :synopsis, :id => 'synopsis_text_area' %></div>
-
-	<div>	
-		<%= f.submit :class => "btn" %>
+	<div><%= f.label 'Name:' %><br /><%= f.text_field :name %></div>
+	<div><%= f.label 'Synopsis:' %><br /><%= f.text_area :synopsis, :id => 'synopsis_text_area' %></div>
+  <div>
+    <%= f.label :imageurl, "Image Url" %><br />
+    <%= f.text_field :imageurl %>
+  </div>
+	<%= f.submit :class => "btn" %>
 <% end %>
-		<%= link_to 'Delete', @manga, method: :delete, data: { confirm: 'Are you sure?' } %>
-	</div>
+
+<%= link_to 'Delete', @manga, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 
 
@@ -26,8 +28,6 @@
 		<td><%= link_to 'Edit', edit_manga_chapter_path(@manga, chapter), :class => 'btn' %>
 				<%= link_to 'Delete', manga_chapter_path(@manga, chapter), method: :delete, :class => 'btn btn-danger'%></a>
 		</td>
-		
-
 	</tr>
 
 	<% end %>

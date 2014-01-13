@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
   
+  before_filter :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
+  
   # GET /items/1
   # GET /items/1.json
   def show

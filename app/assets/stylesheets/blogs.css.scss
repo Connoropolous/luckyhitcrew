@@ -10,23 +10,23 @@
   padding:5px;
 }
 
-.blogtitle {
+.blogpost .blogtitle {
   font-family:'8bit',helvetica, sans-serif;
   font-size:15px;
   line-height:15px;
 }
 
-.blogdate {
+.blogpost .blogdate {
   margin: 5px 0;
 }
 
-.blogimage {
+.blogpost .blogimage {
   float:left;
-  max-width:300px;
+  max-width:300px !important;
   padding: 0 10px 10px 0;
 }
 
-.blogvideo {
+.blogpost .blogvideo {
   float:left;
   padding: 0 10px 10px 0;
 }

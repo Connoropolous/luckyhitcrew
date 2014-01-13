@@ -1,4 +1,7 @@
 class LinksController < ApplicationController
+  
+  before_filter :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
+  
   # GET /links
   # GET /links.json
   def index

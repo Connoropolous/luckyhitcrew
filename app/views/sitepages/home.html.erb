@@ -1,3 +1,43 @@
-<div class="youtube">
-    <iframe width="430" height="242" src="//www.youtube.com/embed/p1LC48ARB-4" frameborder="0" allowfullscreen></iframe>
+<ul class="cycle-slideshow" 
+    data-cycle-fx=scrollHorz
+    data-cycle-timeout=0
+    data-cycle-pager="#thumbnails"
+    data-cycle-slides="li"
+    >
+    <% thumbnailwidth = 0 %>
+    <% @slides.each do |s| %>
+      <% if s.url != "" %>
+      <% thumbnailwidth += 120 %>
+      <% if s.url.index('youtube.com') != nil %>
+        <% id = s.url[-11,11] %>
+        <li class="youtube" data-cycle-pager-template="<div class='slidethumb youtube'><img src='http://img.youtube.com/vi/<%= id %>/1.jpg'></div>">
+          <iframe width="650" height="366" src="<%= s.url %>" frameborder="0" allowfullscreen></iframe>
+        </li>
+      <% else #assume it's an image %>
+        <li data-cycle-pager-template="<div class='slidethumb'><img src='<%= s.url %>'></div>">
+          <img width="650" height="366" src="<%= s.url %>">
+        </li>
+      <% end %>
+      <% end %>
+    <% end %>
+</ul>
+<style>
+#thumbnails {
+  width: <%= thumbnailwidth %>px;
+}
+</style>
+<!-- empty element for pager links -->
+<div class="thumbnailswrapper">
+  <div id="thumbnails" class="center external">
+  </div>
 </div>
+
+<%=raw Pagetext.find(1).text %>
+
+<h2>Updates</h2>
+
+<% @updates.each do |update| %>
+  <%= update.created_at %>
+<% end %>
+
+<a href="/updates">see all</a>

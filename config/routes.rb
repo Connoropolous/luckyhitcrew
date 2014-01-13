@@ -1,8 +1,5 @@
 Luckyhitcrew::Application.routes.draw do
   
-  
-
-
   devise_for :admins
 
   # You can have the root of your site routed with "root"
@@ -17,6 +14,9 @@ Luckyhitcrew::Application.routes.draw do
   match 'contact' => 'sitepages#contact'
   match 'about' => 'sitepages#about'
   
+  resources :videos
+  resources :pagetexts, except: :show
+  resources :slides, except: [:show, :new, :create, :destroy]
   resources :items, except: :index
   resources :links, except: :show
   resources :blogs

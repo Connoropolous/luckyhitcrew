@@ -221,6 +221,42 @@ width: 291px;
   font-family: 'press_start', helvetica, sans-serif;
 }
 
+/* homepage */
+
+ul.cycle-slideshow {
+  list-style:none;
+  height:366px;
+  width:650px;
+  overflow:hidden;
+  margin:0;
+  padding:0;
+}
+
+.thumbnailswrapper {
+  height:68px;
+  width:650px;
+  background: rgba(255,0,0,0.4);
+}
+#thumbnails {
+  margin:0 auto;
+}
+.slidethumb {
+  float:left;
+  cursor:pointer;
+  width:120px;
+  height:68px;
+  overflow:hidden;
+}
+.slidethumb.youtube img {
+  margin-top:-11px;
+}
+.slidethumb img {
+  width:120px;
+}
+.slidethumb img:hover {
+  opacity:0.8;
+}
+
 
 /* links */
 

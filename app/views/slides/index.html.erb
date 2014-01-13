@@ -1,0 +1,23 @@
+<h1>Slides</h1>
+
+<p>If the url is to an image, the image must be of the dimensions 650px wide By 366px high.</p>
+
+<p>If you want to embed a video as a slide, it must be a youtube video. The url has to be of the format "//www.youtube.com/embed/YOURVIDEOID" without the quotes.</p>
+
+<p>You can leave the url field of one or more blank if you do not have 5 slides at some point.</p>
+
+<table>
+  <tr>
+    <th>Slide</th>
+    <th>Url</th>
+    <th></th>
+  </tr>
+
+<% @slides.each_with_index do |slide, index| %>
+  <tr>
+    <td><%= index + 1 %></td>
+    <td><%= slide.url %></td>
+    <td><%= link_to 'Edit', edit_slide_path(slide) %></td>
+  </tr>
+<% end %>
+</table>
