@@ -1,7 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  url: MyString
+  url: //www.youtube.com/embed/gJsD76zir_c
 
 two:
-  url: MyString
+  url: //www.youtube.com/embed/gJsD76zir_c
+  
+three:
+  url: //www.youtube.com/embed/gJsD76zir_c
+
+four:
+  url: //www.youtube.com/embed/gJsD76zir_c
+
+five:
+  url: //www.youtube.com/embed/gJsD76zir_c

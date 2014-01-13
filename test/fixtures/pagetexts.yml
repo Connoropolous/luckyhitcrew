@@ -1,7 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  text: MyText
+  text: home page html
 
 two:
-  text: MyText
+  text: about page html
+  
+three:
+  text: manga page html
+
+four:
+  text: services page html
+
+five:
+  text: media page html
+  
+six:
+  text: links page html
+  
+seven:
+  text: contact page html
