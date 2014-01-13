@@ -2,22 +2,32 @@
 
 <table>
   <tr>
-    <th>Text</th>
-    <th></th>
-    <th></th>
+    <th>For Page</th>
+    <th>HTML</th>
     <th></th>
   </tr>
 
 <% @pagetexts.each do |pagetext| %>
   <tr>
+    <td>
+      <% if pagetext.id == 1 %>
+        Home
+      <% elsif pagetext.id == 1 %>
+        About
+      <% elsif pagetext.id == 1 %>
+        Manga
+      <% elsif pagetext.id == 1 %>
+        Services
+      <% elsif pagetext.id == 1 %>
+        Media
+      <% elsif pagetext.id == 6 %>
+        Links
+      <% elsif pagetext.id == 7 %>
+        Contact
+      <% end %>
+    </td>
     <td><%= pagetext.text %></td>
-    <td><%= link_to 'Show', pagetext %></td>
     <td><%= link_to 'Edit', edit_pagetext_path(pagetext) %></td>
-    <td><%= link_to 'Destroy', pagetext, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Pagetext', new_pagetext_path %>
