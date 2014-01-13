@@ -61,5 +61,7 @@ module Luckyhitcrew
     
     # this is so that we can do custom error pages
     config.exceptions_app = self.routes
+    
+    config.assets.initialize_on_precompile = false
   end
 end
