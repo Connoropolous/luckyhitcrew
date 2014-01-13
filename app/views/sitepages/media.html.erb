@@ -1,6 +1,6 @@
 <h1>Media</h1>
-<%=raw Pagetext.find(5).text) %>
+<%=raw Pagetext.find(5).text %>
 
 <% @videos.each do |v| %>
-  
+  <%= v.url %>
 <% end %>

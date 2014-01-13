@@ -5,7 +5,7 @@ class PagetextsController < ApplicationController
   # GET /pagetexts
   # GET /pagetexts.json
   def index
-    @pagetexts = Pagetext.all
+    @pagetexts = Pagetext.order("id")
 
     respond_to do |format|
       format.html # index.html.erb
