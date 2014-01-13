@@ -4,7 +4,7 @@ class Manga < ActiveRecord::Base
   attr_accessible :name, :synopsis, :imageurl
   attr_protected :slug
 
-  validates_presence_of :name, :synopsis 
+  validates_presence_of :name, :synopsis, :imageurl
 
   def to_param
     slug
@@ -16,7 +16,7 @@ class Manga < ActiveRecord::Base
   
   def self.create_manga!(options = {})
     Manga.transaction do
-      manga = Manga.create!(:name => options[:manga_name], :synopsis => options[:manga_synopsis])
+      manga = Manga.create!(:name => options[:manga_name], :synopsis => options[:manga_synopsis], :imageurl => options[:manga_imageurl])
     end
     rescue
   end

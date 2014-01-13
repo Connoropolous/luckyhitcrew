@@ -58,5 +58,8 @@ module Luckyhitcrew
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # this is so that we can do custom error pages
+    config.exceptions_app = self.routes
   end
 end

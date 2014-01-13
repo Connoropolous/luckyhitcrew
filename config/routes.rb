@@ -1,10 +1,15 @@
 Luckyhitcrew::Application.routes.draw do
   
+  
+
+
   devise_for :admins
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'sitepages#home'
+  
+  match '404', :to => 'errors#not_found'
   
   match 'services' => 'sitepages#services'
   match 'store' => 'sitepages#store'
@@ -12,6 +17,7 @@ Luckyhitcrew::Application.routes.draw do
   match 'contact' => 'sitepages#contact'
   match 'about' => 'sitepages#about'
   
+  resources :items
   resources :links, except: :show
   resources :blogs
   resources :updates

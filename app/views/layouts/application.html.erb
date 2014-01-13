@@ -10,7 +10,7 @@
     <div class="wrapper">
         <header>
             <div class="banner">
-                <h2></h2>
+                <a href="/" class="home"></a>
                 <div class="menu">
                     <ul>
                         <li><a href="/mangas" class="mangamenu"></a></li>
@@ -61,6 +61,7 @@
                     <li><%= link_to 'New Update', new_update_path %></li>
                     <li><%= link_to 'New Manga', new_manga_path %></li>
                     <li><%= link_to 'New Link', new_link_path %></li>
+                    <li><%= link_to 'New Item', new_item_path %></li>
                     <li><%= link_to('Logout', destroy_admin_session_path, :method => :delete) %></li>
                   </ul>
                   <div class="clearfloat"></div>

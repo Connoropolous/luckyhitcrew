@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140112061515) do
+ActiveRecord::Schema.define(:version => 20140112231209) do
 
   create_table "admins", :force => true do |t|
     t.string   "name",                   :default => "", :null => false
@@ -49,6 +49,16 @@ ActiveRecord::Schema.define(:version => 20140112061515) do
   end
 
   add_index "chapters", ["manga_id"], :name => "index_chapters_on_manga_id"
+
+  create_table "items", :force => true do |t|
+    t.string   "title"
+    t.string   "price"
+    t.string   "imageurl"
+    t.string   "category"
+    t.text     "paypalcode"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "links", :force => true do |t|
     t.string   "url"

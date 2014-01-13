@@ -1,4 +1,6 @@
 ---
+404.png: 404-322a13f4bb8cc6f8ff752490e7bd968b.png
+404/index.png: 404-322a13f4bb8cc6f8ff752490e7bd968b.png
 DBbanner.png: DBbanner-f1763594fa38501ce7c001c85aeae936.png
 DBbanner/index.png: DBbanner-f1763594fa38501ce7c001c85aeae936.png
 LHCbg2.png: LHCbg2-9a6293a809d40e1f65e9e279b0af84fd.png
@@ -9,6 +11,8 @@ aboutme.png: aboutme-937fcbb77ba050e159b37ecf85da5a5b.png
 aboutme/index.png: aboutme-937fcbb77ba050e159b37ecf85da5a5b.png
 blog.png: blog-33bdf424dfe1ec66cc1405dda8124d62.png
 blog/index.png: blog-33bdf424dfe1ec66cc1405dda8124d62.png
+contact.png: contact-cd0f31ad413266bb748b638cd61d2802.png
+contact/index.png: contact-cd0f31ad413266bb748b638cd61d2802.png
 contactmenu.png: contactmenu-f0dda1e0508065153ad646c5a5ba2ee2.png
 contactmenu/index.png: contactmenu-f0dda1e0508065153ad646c5a5ba2ee2.png
 da8bit.png: da8bit-b07f7dedf918152dcbf1ae8bd89fb791.png
@@ -17,6 +21,8 @@ fb8bit.png: fb8bit-ba809a642bcbd5783103ad376ab5709a.png
 fb8bit/index.png: fb8bit-ba809a642bcbd5783103ad376ab5709a.png
 gmail8bit.png: gmail8bit-2797642423446d797c3ba8a10af25e10.png
 gmail8bit/index.png: gmail8bit-2797642423446d797c3ba8a10af25e10.png
+home.png: home-d99aad5fb6cf3e0590c829a61ab2f3cf.png
+home/index.png: home-d99aad5fb6cf3e0590c829a61ab2f3cf.png
 linksmenu.png: linksmenu-1f5d4b1bd9a45c52a088109c82150229.png
 linksmenu/index.png: linksmenu-1f5d4b1bd9a45c52a088109c82150229.png
 mangamenu.png: mangamenu-0bcd469acd7d21ab2c7d8e774f5a1baa.png
@@ -41,10 +47,10 @@ t8bit.png: t8bit-931f09e509c9ba8f4f7248a72ef5161e.png
 t8bit/index.png: t8bit-931f09e509c9ba8f4f7248a72ef5161e.png
 yt8bit.png: yt8bit-bdd4a84c67e3e312a40593032a87e577.png
 yt8bit/index.png: yt8bit-bdd4a84c67e3e312a40593032a87e577.png
-application.js: application-992a6f01c2ee4897aed1c283bf901d14.js
-application/index.js: application-992a6f01c2ee4897aed1c283bf901d14.js
-application.css: application-b362b5f7c4b8f3ac9dbfeaf62afa1b79.css
-application/index.css: application-b362b5f7c4b8f3ac9dbfeaf62afa1b79.css
+application.js: application-70b1f94b2f16491f6e1fea532492e0dd.js
+application/index.js: application-70b1f94b2f16491f6e1fea532492e0dd.js
+application.css: application-6de5842ca5597174e1a5752024de6957.css
+application/index.css: application-6de5842ca5597174e1a5752024de6957.css
 fonts/8-bit_wonder-webfont.eot: fonts/8-bit_wonder-webfont-ee716c80e476a74af70f228131b01b26.eot
 fonts/8-bit_wonder-webfont/index.eot: fonts/8-bit_wonder-webfont-ee716c80e476a74af70f228131b01b26.eot
 fonts/8-bit_wonder-webfont.svg: fonts/8-bit_wonder-webfont-e208f69443ec813b653d81682a6b39ff.svg

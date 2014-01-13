@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Back to Store', items_path %>
+
+    <h1><%= @item.title %></h1>
+    $<%= @item.price %>
+    <%=raw @item.paypalcode %>
+    <img class="storeshowimage" src="<%= @item.imageurl %>">
+    <% if admin_signed_in? %>
+      <%= link_to 'Edit', edit_item_path(@item) %>
+      <%= link_to 'Destroy', @item, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>

@@ -1,0 +1,23 @@
+// Place all the styles related to the Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// on store page 
+
+.storeitem {
+  background: rgba(255,0,0,0.4);
+  width:200px;
+  margin-left:20px;
+  padding:5px;
+}
+
+.storeimage {
+  width:200px;
+}
+
+
+// on individual item page
+
+.storeshowimage {
+  max-width:640px;
+}

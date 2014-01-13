@@ -6,4 +6,27 @@
 
 .blogpost {
   margin-top:30px;
+  background: rgba(0,255,0,0.4);
+  padding:5px;
+}
+
+.blogtitle {
+  font-family:'8bit',helvetica, sans-serif;
+  font-size:15px;
+  line-height:15px;
+}
+
+.blogdate {
+  margin: 5px 0;
+}
+
+.blogimage {
+  float:left;
+  max-width:300px;
+  padding: 0 10px 10px 0;
+}
+
+.blogvideo {
+  float:left;
+  padding: 0 10px 10px 0;
 }

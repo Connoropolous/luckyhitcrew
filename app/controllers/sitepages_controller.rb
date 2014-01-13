@@ -33,7 +33,9 @@ class SitepagesController < ApplicationController
     end
     
     def store
-        
+       @commissions = Item.find_all_by_category("Commission")
+      @mangas = Item.find_all_by_category("Manga")
+      @artworks = Item.find_all_by_category("Artwork") 
     end
     
 end

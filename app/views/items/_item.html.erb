@@ -1,0 +1,10 @@
+<div class="storeitem">
+    <a href="<%= item_path(item) %>"><%= item.title %></a><br>
+    $<%= item.price %>
+    <a href="<%= item_path(item) %>"><img class="storeimage" src="<%= item.imageurl %>"></a>
+    <%=raw item.paypalcode %>
+    <% if admin_signed_in? %>
+      <%= link_to 'Edit', edit_item_path(item) %>
+      <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
