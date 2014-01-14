@@ -1,11 +1,6 @@
+<%= link_to "Back to editing #{@manga.name}", edit_manga_path(@manga), :class => 'backtoeditmanga' %>
 
-<ul class="breadcrumb">
-  <li><%= link_to 'Home', root_path %><span class="divider">/</span></li>
-  <li><%= link_to "Edit #{@manga.name}", edit_manga_path(@manga) %><span class="divider">/</span></li>
-  <li class="active"><%= @chapter.title %></li>
-</ul>
-
-
+<h1>Editing <%= @chapter.title %></h1>
 
 <div>
 <%= form_for [@manga, @chapter] do |f| %>
@@ -17,12 +12,24 @@
 <% end %>
 </div>
 
+<div>
+  <p>Images for manga need to have specific file names to make this manga viewing system work. Your file names must be of the format 
+  <strong>mangatitle_ch01_p01.jpg</strong> or <strong>mangatitle_ch01_p01.png</strong></p>
+  <p>The files must have the proper page number at the end of the filename in order to make viewing the chapter happen in the correct order. The next file would be <strong>mangatitle_ch01_p02.jpg</strong>.</p>
+  <p>It doesn't matter what order you upload the image files in on this page, or what order they appear in here, as long as they all have the correct filenames.</p>
+</div>
+
 <div class='edit-chapter-pages'>
 <%= render 'chapter_pages', :chapter => @chapter %>
 </div>
+<div class="clearfloat"></div>
 
 <div class='chapter_input'>
 	<br />
 	<%= render 'chapters/form', :chapter_id => @chapter.id %>
 </div>
+
+<br>
+<br>
+<%= link_to 'View This Chapter', manga_chapter_path(@manga, @chapter) %>
 

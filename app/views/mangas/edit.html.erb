@@ -1,11 +1,11 @@
 <h2>Series Management</h2>
+<div class="mangadelete"><%= link_to 'Delete this manga', @manga, method: :delete, data: { confirm: 'Are you sure?' } %></div>
 
 <h3><%= @manga.name %></h3>
 
-
 <%= form_for @manga do |f| %>
 	<div><%= f.label 'Name:' %><br /><%= f.text_field :name %></div>
-	<div><%= f.label 'Synopsis:' %><br /><%= f.text_area :synopsis, :id => 'synopsis_text_area' %></div>
+	<div><%= f.label 'Synopsis:' %><br /><%= f.text_area :synopsis, :id => 'synopsis_text_area', :rows => '5' %></div>
   <div>
     <%= f.label :imageurl, "Image Url" %><br />
     <%= f.text_field :imageurl %>
@@ -13,25 +13,17 @@
 	<%= f.submit :class => "btn" %>
 <% end %>
 
-<%= link_to 'Delete', @manga, method: :delete, data: { confirm: 'Are you sure?' } %>
+<h3>Edit/Add Chapters</h3>
 
-
-
-<table class="table">
-
-	<thead><tr><td><strong>Chapters:</strong></td><td>Manage:</td></tr></thead>
-
+<% if @manga.chapters.count > 0 %>
 	<% @manga.chapters.each do |chapter| %>
-	
-	<tr>
-		<td><%= chapter.title %></td>
-		<td><%= link_to 'Edit', edit_manga_chapter_path(@manga, chapter), :class => 'btn' %>
-				<%= link_to 'Delete', manga_chapter_path(@manga, chapter), method: :delete, :class => 'btn btn-danger'%></a>
-		</td>
-	</tr>
-
+		<%= chapter.title %>
+		<%= link_to 'Edit', edit_manga_chapter_path(@manga, chapter) %>
+		<%= link_to 'Delete', manga_chapter_path(@manga, chapter), method: :delete %>
+    <br>
 	<% end %>
-
-	<tr><td colspan='2'><%= link_to 'Add Chapter', new_manga_chapter_path(@manga), :class => 'btn' %></td></tr>
-
-</table>
+<% end %>
+<%= link_to 'Add Chapter', new_manga_chapter_path(@manga) %>
+<br>
+<br>
+<%= link_to 'View This Manga', manga_path(@manga) %>

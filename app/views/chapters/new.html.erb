@@ -1,3 +1,5 @@
+<h1>Add Chapter to <%= @manga.name %></h1>
+
 <%= form_for [@manga, @chapter] do |f| %>
   <% if @chapter.errors.any? %>
     <div id="error_explanation">
@@ -13,11 +15,12 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title, class: 'span5' %>
-
+    <%= f.text_field :title %>
   </div>
 
   <div class="actions">
     <%= f.submit 'Add Chapter' %>
   </div>
 <% end %>
+
+<%= link_to 'Cancel', edit_manga_path(@manga) %>

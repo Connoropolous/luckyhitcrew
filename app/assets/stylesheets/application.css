@@ -262,6 +262,67 @@ ul.cycle-slideshow {
   margin-top:8px;
 }
 
+/* manga */ 
+
+.manga {
+  position:relative;
+  margin-bottom:30px;
+}
+
+.mangaoverlay {
+  position:absolute;
+  min-width:150px;
+  max-width:200px;
+  background: rgba(0,0,0,0.7);
+  padding:20px;
+}
+
+.manga .mangalink {
+  color:white;
+}
+.manga h2 {
+  color:white;
+  font-size:1.5em;
+  line-height:1.5em;
+}
+.manga a.mangalink:hover .mangaoverlay {
+  background: black;
+}
+
+.editlink {
+  position:absolute;
+  bottom:8px;
+  left:8px;
+  background: white;
+  padding:3px;
+}
+
+.goback {
+  display:block;
+  margin-top:20px;
+}
+
+
+/* edit manga */
+
+.mangadelete {
+  position:absolute;
+  top: 46px;
+  right: 70px;
+}
+
+/* edit manga chapter */
+.backtoeditmanga {
+  display:block;
+  margin: 10px 0;
+}
+
+.page-edit {
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  background: rgba(255,0,0,0.4);
+}
 
 /* links */
 

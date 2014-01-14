@@ -2,26 +2,18 @@
 
 <%=raw Pagetext.find(3).text %>
 
-<table class="table table-hover">
-
-<thead>
-	<tr>
-		<td>Series Name:</td>
-		<% if admin_signed_in? %>
-		<td>Admin:</td>
-		<% end %>
-	</tr>
-</thead>
-
 <% @mangas.each do |manga| %> 
-
-	<tr>
-		<td><%= link_to manga.name, manga_path(manga) %></td>
-		<% if admin_signed_in? %>
-		<td><%= link_to "Manage", edit_manga_path(manga.slug) %></td>
+  <div class="manga">
+	  <a class="mangalink" href="<%= manga_path(manga) %>">
+      <div class="mangaoverlay">
+        <h2><%= manga.name %></h2>
+		    <div class="mangasynopsis"><%= manga.synopsis %></div>
+      </div>
+      <div class="mangaimage"><%= image_tag manga.imageurl %></div>
+    </a>
+    
+    <% if admin_signed_in? %>
+		  <div class="editlink"><%= link_to "Edit", edit_manga_path(manga.slug) %></div>
 		<% end %>
-	</tr>
-
+  </div>
 <% end %>
-
-</table>

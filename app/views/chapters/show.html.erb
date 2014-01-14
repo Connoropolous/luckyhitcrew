@@ -1,6 +1,13 @@
+<% if @manga.name == "Double Blackness" %>
+<style>
+.banner {
+  background-image: url(/assets/doubleblacknessbanner.png) !important;
+}
+</style>
+<% end %>
 
 <div class="navbar" id="chapter-nav-bar">
-		<a class="brand" id="current_chapter_title"><%= @chapter.title %></a>
+		<h1 class="brand" id="current_chapter_title"><%= @chapter.title %></h1>
 
 		<ul class="nav pull-right">
 			<li>
