@@ -1,6 +1,16 @@
 <h1>Media</h1>
 <%=raw Pagetext.find(5).text %>
 
-<% @videos.each do |v| %>
-  <%= v.url %>
+<% if admin_signed_in? %>
+  <p><a href="/videos">Manage Your Videos</a></p>
 <% end %>
+
+<% @videos.each_with_index do |v, index| %>
+  <% if (index % 2) == 0
+       oddeven = "even"
+     else
+       oddeven = "odd"
+     end %>
+  <iframe class="mediavideo <%= oddeven %>" width="310" height="174" src="//www.youtube.com/embed/<%= v.url %>" frameborder="0" allowfullscreen></iframe>
+<% end %>
+<div class="clearfloat"></div>

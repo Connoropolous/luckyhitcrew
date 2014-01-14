@@ -37,7 +37,9 @@
 <h2>Updates</h2>
 
 <% @updates.each do |update| %>
-  <%= update.created_at %>
+  <%= render update %>
 <% end %>
 
-<a href="/updates">see all</a>
+<div class="seeallupdates">
+  <a href="/updates">view all updates</a>
+</div>

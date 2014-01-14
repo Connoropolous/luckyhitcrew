@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
   
-  before_filter :authenticate_admin!, only: [:index, :new, :edit, :create, :update, :destroy]
+  before_filter :authenticate_admin!
   
   # GET /videos
   # GET /videos.json
@@ -10,17 +10,6 @@ class VideosController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @videos }
-    end
-  end
-
-  # GET /videos/1
-  # GET /videos/1.json
-  def show
-    @video = Video.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @video }
     end
   end
 
@@ -47,7 +36,7 @@ class VideosController < ApplicationController
 
     respond_to do |format|
       if @video.save
-        format.html { redirect_to @video, notice: 'Video was successfully created.' }
+        format.html { redirect_to videos_path, notice: 'Video was successfully created.' }
         format.json { render json: @video, status: :created, location: @video }
       else
         format.html { render action: "new" }
@@ -63,7 +52,7 @@ class VideosController < ApplicationController
 
     respond_to do |format|
       if @video.update_attributes(params[:video])
-        format.html { redirect_to @video, notice: 'Video was successfully updated.' }
+        format.html { redirect_to videos_path, notice: 'Video was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

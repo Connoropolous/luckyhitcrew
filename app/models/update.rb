@@ -1,3 +1,3 @@
 class Update < ActiveRecord::Base
-  attr_accessible :body, :title
+  attr_accessible :body, :title, :link
 end

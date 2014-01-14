@@ -1,0 +1,12 @@
+    <div class="update">
+      <div class="updatetitle"><%= update.title %></div>
+      <div class="updatedate"><%= update.created_at.strftime("%b %d, %Y")  %></div>
+      <div><%= update.body %></div>
+      <% if update.link %>
+        <%= link_to update.link, update.link, :target => "_blank" %><br>
+      <% end %>
+      <% if admin_signed_in? %>
+        <%= link_to 'Edit', edit_update_path(update) %>
+        <%= link_to 'Delete', update, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>

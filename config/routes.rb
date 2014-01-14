@@ -14,13 +14,17 @@ Luckyhitcrew::Application.routes.draw do
   match 'contact' => 'sitepages#contact'
   match 'about' => 'sitepages#about'
   
-  resources :videos
-  resources :pagetexts, except: :show
+  resources :videos, except: :show
+  resources :pagetexts, except: [:show, :new, :create, :destroy]
   resources :slides, except: [:show, :new, :create, :destroy]
   resources :items, except: :index
   resources :links, except: :show
-  resources :blogs
-  resources :updates
+  resources :blogs do
+    get 'page/:page', :action => :index, :on => :collection
+  end
+  resources :updates, except: :show do
+    get 'page/:page', :action => :index, :on => :collection
+  end
   resources :pages
   
   get     'mangas/:manga_id/chapters(.:format)'               => 'chapters#index',  :as => :manga_chapters

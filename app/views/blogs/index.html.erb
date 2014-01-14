@@ -6,7 +6,7 @@
     <div class="blogdate"><%= blog.created_at.strftime("%b %d, %Y")  %></div>
     <div class="blogbody">
       <% if blog.mediatype == "Image" %>
-        <img class="blogimage" src="<%= blog.mediaurl %>">
+        <a href="<%= blog_path(blog) %>"><img class="blogimage" src="<%= blog.mediaurl %>"></a>
       <% elsif blog.mediatype == "Youtube Video" %>
         <iframe class="blogvideo" width="300" height="169" src="<%= blog.mediaurl %>" frameborder="0" allowfullscreen></iframe>
       <% end %>
@@ -22,6 +22,6 @@
   </div>
 <% end %>
 
-<br />
+<%= paginate @blogs %>
 
 

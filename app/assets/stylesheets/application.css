@@ -257,6 +257,11 @@ ul.cycle-slideshow {
   opacity:0.8;
 }
 
+.seeallupdates {
+  text-align:center;
+  margin-top:8px;
+}
+
 
 /* links */
 
@@ -264,6 +269,22 @@ ul.cycle-slideshow {
   margin-top:10px;
   background: rgba(255,0,0,0.4);
   padding:5px;
+}
+
+/* media */
+
+.mediavideo.even {
+ margin-right: 30px;
+}
+.mediavideo {
+ float: left;
+ margin-bottom:30px;
+}
+
+/* pagination */
+
+.pagination {
+ margin: 20px 0;
 }
 
 /* 404 */
