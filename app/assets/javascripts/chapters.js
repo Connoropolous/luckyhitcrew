@@ -9,6 +9,7 @@ $(document).ready(function(){
 	};
 
 	var show_page = function(page) {
+    $('#last_chapter').hide();
 		page.attr('data-active', 'true');
 		page.show();
 	};
