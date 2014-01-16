@@ -9,9 +9,9 @@
 <div class="navbar" id="chapter-nav-bar">
 		<h1 class="brand" id="current_chapter_title"><%= @chapter.title %></h1>
 
-		<ul class="nav pull-right">
-			<li>
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">chapters</a>
+		<ul class="nav pull-right chapter-nav">
+			<li id="chapters">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#"></a>
 							<ul id="chapters-dropdown" class="dropdown-menu">
 								<% @manga.chapters.each do |chapter| %>
 									<li id="chapter-dropdown">
@@ -21,20 +21,21 @@
 								<% end %> 
 							</ul>
 			</li>
-			<li id="chapter-previous-page"><a href="#">previous</a></li>
-			<li id="chapter-next-page"><a href="#">next</a></li>
-			<li>
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">pages</a>
+      <li id="pages">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#"></a>
 							<ul class="pages-dropdown dropdown-menu">
 								<% @chapter.sorted_pages.each do |page| %>
-									<li id="page-dropdown">
+									<li class="page-dropdown">
 										<a href="#" id="<%= page.page_number %>"><%= page.page_number %></a>
 									</li>
 								<% end %> 
 							</ul>
 			</li>
+			<li id="chapter-previous-page"><a href="#" title="back" ></a></li>
+			<li id="chapter-next-page"><a href="#" title="next" ></a></li>
 		</ul>
 </div>
+<div class="clearfloat"></div>
 
 <div id='chapter'>
 	<% @chapter.sorted_pages.each do |page| %>

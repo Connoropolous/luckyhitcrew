@@ -365,6 +365,87 @@ ul.cycle-slideshow {
   margin-top:10px;
 }
 
+/* manga page */
+
+.chapter-nav {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.chapter-nav > li {
+  float:left;
+}
+
+.dropdown-menu {
+  list-style: none;
+  border: 3px solid black;
+  padding:0;
+}
+
+.dropdown-menu li {
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+
+.dropdown-menu li a {
+  font-family:'8bit', helvetica, sans-serif;
+  text-decoration:none;
+  font-size:9px;
+  padding:5px;
+  line-height:9px;
+  display:block;
+}
+
+#chapters {
+  height:40px;
+  background-image: url(chaptersbutton.png);
+  background-repeat:no-repeat;
+  position:relative;
+}
+#chapters > a, #pages > a {
+  display:block;
+  width:100px;
+  height:40px;
+}
+#chapters > ul , #pages > ul {
+  position:absolute;
+  display:none;
+  background:white;
+}
+#chapters > ul {
+  min-width:200px;
+}
+
+#chapter-previous-page {
+  width:40px;
+  height:40px;
+  background-image: url(backbutton.png);
+}
+
+#chapter-next-page {
+  width:40px;
+  height:40px;
+  background-image: url(forwardbutton.png);
+}
+#chapter-next-page a, #chapter-previous-page a {
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+#pages {
+  height:40px;
+  background-image: url(pagesbutton.png);
+  background-repeat:no-repeat;
+  position:relative;
+}
+
+#chapter {
+  margin-top:20px;
+}
+
 /* footer */
 
 footer {

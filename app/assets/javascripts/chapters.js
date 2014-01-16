@@ -82,14 +82,30 @@ $(document).ready(function(){
 
 	pages.click(function (){
 		show_next();
+    event.preventDefault();
 	});
+  
+  $("#chapters > a").click(function(event) {
+    $("#pages ul").hide();
+    $("#chapters ul").show();
+    event.preventDefault();
+    event.stopPropagation();
+  });
+  $("#pages > a").click(function(event) {
+    $("#chapters ul").hide();
+    $("#pages ul").show();
+    event.preventDefault();
+    event.stopPropagation();
+  });
 
-	$("#chapter-previous-page").click(function() {
+	$("#chapter-previous-page").click(function(event) {
 		show_previous();
+    event.preventDefault();
 	});
 
-	$("#chapter-next-page").click(function() {
+	$("#chapter-next-page").click(function(event) {
 		show_next();
+    event.preventDefault();
 	});
 
 	$("body").keydown(
@@ -97,19 +113,25 @@ $(document).ready(function(){
 			if (event.which == 39 ) { show_next(); }
 			else if (event.which == 37 ) { show_previous(); }
 		});
+   
+  $("html").click(function() {
+    $("#chapters ul, #pages ul").hide();
+  });
 
-	$("li#page-dropdown a").click(function(){
+	$("li.page-dropdown a").click(function(event){
+    $("#chapters ul, #pages ul").hide();
 		var active = $('[data-active="true"]');
 		var n = parseInt($(this).text());
 		var nextPage = $("div[id*='" + n + "']");
 		hide_page(active);
 		show_page(nextPage);
+    event.preventDefault();
 	});
 
 	$('.edit-chapter-pages').on('ajax:success', 'a', function(event, data){
 		pageToRemove = "img[src*='" + data.pagename + "']" 
 		$(pageToRemove).parent().remove();
-	})
+	});
 
 
 });
